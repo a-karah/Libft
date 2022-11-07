@@ -47,7 +47,7 @@ address: CFLAGS += -fsanitize=address -g
 address: re
 
 $(NAME): $(OBJS)
-	@printf "$(_CLR_LINE)$(_GREEN) Executable '$(NAME)' created. $(_END)✅\n"
+	@printf "$(_CLR_LINE)$(_GREEN) Static library '$(NAME)' created. $(_END)✅\n"
 	@ar $(ARFLAGS) $(NAME) $(OBJS)
 
 %.o: %.c
@@ -55,7 +55,7 @@ $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 bonus: $(OBJS) $(OBJS_BONUS)
-	@printf "$(_CLR_LINE)$(_GREEN) Executable '$(NAME)' created. $(_END)✅\n"
+	@printf "$(_CLR_LINE)$(_GREEN) Static library '$(NAME)' created. $(_END)✅\n"
 	@ar $(ARFLAGS) $(NAME) $(OBJS) $(OBJS_BONUS)
 
 clean:
